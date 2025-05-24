@@ -2,7 +2,7 @@
 
 Python脚本，能把视频文件以合适的码率转换为H265格式，缩小文件大小。使用ffmpeg和nvidia显卡加速。
 
-A Python script that can convert video files to H265 format at proper bitrate. Use ffmpeg and Nvidia graphics card acceleration.
+A Python script that can convert video files to H265 format at proper bitrate to make the file smaller. Use ffmpeg and Nvidia graphics card acceleration.
 
 ## 依赖 Dependency
 
