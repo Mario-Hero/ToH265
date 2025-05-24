@@ -161,8 +161,10 @@ def get_bitrate(input_path) -> float:
 def convert_video(input_path) -> bool:
     """Convert the video to H265 format"""
     if os.path.isdir(input_path):
+        ret_convert = True
         for child_dir in os.listdir(input_path):
-            convert_video(os.path.join(input_path, child_dir))
+            ret_convert = ret_convert & convert_video(os.path.join(input_path, child_dir))
+        return ret_convert
 
     if not input_path.lower().endswith(VIDEO_EXT_SUPPORTED):
         print(f"The file {input_path} is not a supported video format.")
